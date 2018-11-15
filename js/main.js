@@ -87,7 +87,7 @@ arrowButtons.innerHTML =
 <button type="button" class="arrows__btn arrows__btn--next">-></button>`;
 appNode.appendChild(arrowButtons);
 
-let navigationNext = arrowButtons.querySelector(`.arrows__btn--next`);
+const navigationNext = arrowButtons.querySelector(`.arrows__btn--next`);
 const navigationPrev = arrowButtons.querySelector(`.arrows__btn--prev`);
 
 if (navigationNext) {
