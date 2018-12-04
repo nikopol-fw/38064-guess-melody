@@ -2,6 +2,8 @@
 import {createNode, showScreen} from './utils.js';
 import gameGenre from './game-genre.js';
 
+import getScore from './score/score';
+
 
 const template = `
   <section class="welcome">
@@ -28,6 +30,19 @@ playBtn.addEventListener(`click`, (evt) => {
   evt.preventDefault();
   showScreen(gameGenre);
 });
+
+getScore([{
+  answer: true, time: 30001}, {
+  answer: true, time: 150000}, {
+  answer: true, time: 99999}, {
+  answer: true, time: 45000}, {
+  answer: true, time: 31000}, {
+  answer: true, time: 32000}, {
+  answer: true, time: 100000}, {
+  answer: true, time: 50000}, {
+  answer: true, time: 60000}, {
+  answer: true, time: 50000}
+], 0);
 
 
 export default element;
