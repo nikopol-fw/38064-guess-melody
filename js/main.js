@@ -1,6 +1,5 @@
 
-import {showScreen} from './utils.js';
-import welcome from './welcome.js';
+import {renderWelcomeScreen} from './utils';
 
 
-showScreen(welcome);
+renderWelcomeScreen();
