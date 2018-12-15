@@ -17,7 +17,7 @@ export default class GameGenreView extends AbstractView {
       'R&B': `Ритм-энд-блюз`,
       'Pop': `Поп`,
       'Electronic': `Электро`
-    }
+    };
   }
 
   get template() {
