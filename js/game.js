@@ -1,7 +1,7 @@
 
 import {INIT_GAME} from './data/data';
 import QUESTS from './data/data-quest';
-import {renderLayout, renderGameScreen, renderResult, renderDefeat} from './utils';
+import {renderLayout, renderGameScreen, renderResult, renderDefeat} from './utils/utils';
 
 
 let game = Object.assign({}, INIT_GAME);

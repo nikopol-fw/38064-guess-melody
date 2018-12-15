@@ -1,13 +1,13 @@
 
-import QUESTS from './data/data-quest';
-import {game} from './game';
-import {layout, gameScreen, changeLayoutState} from './templates/layout-main';
-import headerTemplate from './templates/layout-header';
-import welcomeTemplate from './templates/game-welcome';
-import getGenreTemplate from './templates/game-screen-genre';
-import getArtistTemplate from './templates/game-screen-artist';
-import resultTemplate from './templates/game-result';
-import defeatTemplate from './templates/game-defeat';
+import QUESTS from '../data/data-quest';
+import {game, startGame, toNextLevel} from '../game';
+import {layout, gameScreen, changeLayoutState} from '../templates/layout-main';
+import headerTemplate from '../templates/layout-header';
+import WelcomeView from '../templates/welcome-view';
+import GameGenreView from '../templates/game-genre-view';
+import GameArtistView from '../templates/game-artist-view';
+import resultTemplate from '../templates/game-result';
+import defeatTemplate from '../templates/game-defeat';
 
 
 const appNode = document.querySelector(`.app`);
@@ -22,6 +22,7 @@ const render = (parentNode, template) => {
   parentNode.appendChild(template);
 };
 
+
 // Отрисовывает основной шаблон
 const renderLayout = () => {
   clearScreen();
@@ -32,7 +33,11 @@ const renderLayout = () => {
 // Отрисовка экрана приветствия
 const renderWelcomeScreen = () => {
   clearScreen();
-  render(mainNode, welcomeTemplate);
+
+  const welcomeScreen = new WelcomeView([`welcome`, `fuck`]);
+  welcomeScreen.onClick = startGame;
+
+  render(mainNode, welcomeScreen.element);
 };
 
 // Отрисовка игрового экрана
@@ -42,12 +47,16 @@ const renderGameScreen = (levelIndex) => {
   switch (QUESTS[levelIndex].type) {
     case `genre`:
       changeLayoutState(`game--genre`);
-      render(gameScreen, getGenreTemplate(game.level));
+      const genreScreen = new GameGenreView([`game__screen`], QUESTS[game.level]);
+      genreScreen.onSubmit = toNextLevel;
+      render(gameScreen, genreScreen.element);
       break;
 
     case `artist`:
       changeLayoutState(`game--artist`);
-      render(gameScreen, getArtistTemplate(game.level));
+      const artistScreen = new GameArtistView([`game__screen`], QUESTS[game.level]);
+      artistScreen.onChoose = toNextLevel;
+      render(gameScreen, artistScreen.element);
       break;
 
     default:
