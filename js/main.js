@@ -1,5 +1,5 @@
 
-import {renderWelcomeScreen} from './utils';
+import {renderWelcomeScreen} from './utils/utils';
 
 
 renderWelcomeScreen();

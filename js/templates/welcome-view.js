@@ -1,8 +1,18 @@
+// welcome-view.js
 
-import {startGame} from '../game';
+import AbstractView from './abstract-view';
 
 
-const template = `
+/**
+ * Модуль WelcomeView описывает внешний вид и поведение экрана приветствия
+ */
+export default class WelcomeView extends AbstractView {
+  constructor(htmlClasses = []) {
+    super(htmlClasses);
+  }
+
+  get template() {
+    return `
   <div class="welcome__logo">
     <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83">
   </div>
@@ -16,19 +26,18 @@ const template = `
     <li>Можно допустить 3 ошибки.</li>
   </ul>
   <p class="welcome__text">Удачи!</p>
-`;
+    `;
+  }
 
+  onClick() { }
 
-const welcomeTemplate = document.createElement(`section`);
-welcomeTemplate.classList.add(`welcome`);
-welcomeTemplate.innerHTML = template;
+  bind() {
+    const playBtn = this.element.querySelector(`.welcome__button`);
 
-const playBtn = welcomeTemplate.querySelector(`.welcome__button`);
-playBtn.addEventListener(`click`, (evt) => {
-  evt.preventDefault();
+    playBtn.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
 
-  startGame();
-});
-
-
-export default welcomeTemplate;
+      this.onClick();
+    });
+  }
+}
