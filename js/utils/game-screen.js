@@ -5,7 +5,6 @@ import HeaderView from '../templates/header-view';
 import GameGenreView from '../templates/game-genre-view';
 import GameArtistView from '../templates/game-artist-view';
 
-import resultDefeatTime from '../templates/result-defeat-time';
 import Application from '../app';
 
 
@@ -112,7 +111,7 @@ export default class GameScreen {
 
   _tick() {
     if (this.model.state.time === 0) {
-      Application.showResult(resultDefeatTime);
+      Application.showDefeatTime();
     } else {
       this._timer = setTimeout(() => {
         this.model.tickTime();

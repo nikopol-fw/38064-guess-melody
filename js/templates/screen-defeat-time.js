@@ -1,4 +1,4 @@
-// result-time-view
+// screen-defeat-time
 
 import Application from '../app';
 
@@ -13,11 +13,11 @@ const template = `
 `;
 
 
-const resultDefeatTime = document.createElement(`section`);
-resultDefeatTime.classList.add(`result`);
-resultDefeatTime.innerHTML = template;
+const screenDefeatTime = document.createElement(`section`);
+screenDefeatTime.classList.add(`result`);
+screenDefeatTime.innerHTML = template;
 
-const btnReplay = resultDefeatTime.querySelector(`.result__replay`);
+const btnReplay = screenDefeatTime.querySelector(`.result__replay`);
 btnReplay.addEventListener(`click`, (evt) => {
   evt.preventDefault();
 
@@ -25,4 +25,4 @@ btnReplay.addEventListener(`click`, (evt) => {
 });
 
 
-export default resultDefeatTime;
+export default screenDefeatTime;

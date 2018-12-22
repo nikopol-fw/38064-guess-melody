@@ -1,11 +1,10 @@
 // app
 
 import WelcomeView from './templates/welcome-view';
-
 import GameModel from './utils/game-model';
 import GameScreen from './utils/game-screen';
-
 import ResultWinScreen from './utils/result-win-screen';
+import screenDefeatTime from './templates/screen-defeat-time';
 
 
 const appNode = document.querySelector(`.app`);
@@ -75,6 +74,12 @@ export default class Application {
     clearScreen();
     const resultScreen = new ResultWinScreen(model);
     renderView(mainNode, resultScreen.element);
+  }
+
+  static showDefeatTime() {
+    clearScreen();
+    const defeatScreen = screenDefeatTime;
+    renderView(mainNode, defeatScreen);
   }
 
   static getLayout() {
