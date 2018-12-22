@@ -5,9 +5,7 @@ import HeaderView from '../templates/header-view';
 import GameGenreView from '../templates/game-genre-view';
 import GameArtistView from '../templates/game-artist-view';
 
-
 import resultDefeatTime from '../templates/result-defeat-time';
-//import resultDefeatLives from '../templates/result-defeat-lives';
 import Application from '../app';
 
 

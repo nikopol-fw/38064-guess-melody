@@ -6,8 +6,6 @@ import GameModel from './utils/game-model';
 import GameScreen from './utils/game-screen';
 
 import ResultWinScreen from './utils/result-win-screen';
-//import ResultWinView from '../templates/result-win-view';
-//import HeaderView from './templates/header-view';
 
 
 const appNode = document.querySelector(`.app`);
