@@ -1,6 +1,7 @@
 // welcome-view.js
 
 import AbstractView from './abstract-view';
+import Application from '../app';
 
 
 /**
@@ -29,15 +30,13 @@ export default class WelcomeView extends AbstractView {
     `;
   }
 
-  onClick() { }
-
   bind() {
     const playBtn = this.element.querySelector(`.welcome__button`);
 
     playBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
 
-      this.onClick();
+      Application.showGame();
     });
   }
 }

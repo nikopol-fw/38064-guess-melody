@@ -24,7 +24,7 @@ export default class GameArtistView extends AbstractView {
   <form class="game__artist">
     ${(this.quest.answers).map((answer, ind) =>
     `<div class="artist">
-      <input class="artist__input visually-hidden" type="radio" name="answer" value="artist-${ind + 1}" id="answer-${ind + 1}">
+      <input class="artist__input visually-hidden" type="radio" name="answer" value="${ind}" id="answer-${ind + 1}">
       <label class="artist__name" for="answer-${ind + 1}">
         <img class="artist__picture" src="${answer.image}" alt="${answer.artist}">
         ${answer.artist}
@@ -44,7 +44,7 @@ export default class GameArtistView extends AbstractView {
     artistForm.addEventListener(`change`, () => {
       for (const input of artistInputs) {
         if (input.checked === true) {
-          this.onChoose();
+          this.onChoose(input.value);
           return;
         }
       }

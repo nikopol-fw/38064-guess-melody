@@ -1,4 +1,4 @@
-// Родительский ласс для всех View
+// Родительский класс для всех View
 
 export default class AbstractView {
   constructor(htmlClasses = []) {

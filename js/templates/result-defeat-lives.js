@@ -1,5 +1,6 @@
+// result-lives-view
 
-import {startGame} from '../game';
+import Application from '../app';
 
 
 const template = `
@@ -10,16 +11,16 @@ const template = `
 `;
 
 
-const defeatTemplate = document.createElement(`section`);
-defeatTemplate.classList.add(`result`);
-defeatTemplate.innerHTML = template;
+const resultDefeatLives = document.createElement(`section`);
+resultDefeatLives.classList.add(`result`);
+resultDefeatLives.innerHTML = template;
 
-const btnReplay = defeatTemplate.querySelector(`.result__replay`);
+const btnReplay = resultDefeatLives.querySelector(`.result__replay`);
 btnReplay.addEventListener(`click`, (evt) => {
   evt.preventDefault();
 
-  startGame();
+  Application.showGame();
 });
 
 
-export default defeatTemplate;
+export default resultDefeatLives;

@@ -1,6 +1,6 @@
 
 const getScore = (answers, lives) => {
-  const TIME_LIMIT = 30000;
+  const TIME_LIMIT = 30;
   const Answer = {
     WRONG: -2,
     RIGHT: 1,

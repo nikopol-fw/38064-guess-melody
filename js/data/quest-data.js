@@ -32,7 +32,8 @@ const QUESTS = [
         src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
         genre: `R&B`
       }
-    ])
+    ]),
+    answers: [`1`]
   },
   {
     type: `artist`,
@@ -56,7 +57,8 @@ const QUESTS = [
         artist: `Riot`,
         image: `https://i.ytimg.com/vi/jzgM3m8Vp1k/maxresdefault.jpg`
       }
-    ]
+    ],
+    answer: `1`
   },
 
 
@@ -92,7 +94,8 @@ const QUESTS = [
         src: `https://www.youtube.com/audiolibrary_download?vid=bcbe5be936a32fb1`,
         genre: `Pop`
       }
-    ])
+    ]),
+    answers: [`3`]
   },
   {
     type: `artist`,
@@ -116,7 +119,8 @@ const QUESTS = [
         artist: `Audionautix`,
         image: `http://4.bp.blogspot.com/-kft9qu5ET6U/VPFUBi9W-MI/AAAAAAAACYM/UxXilXKYwOc/s1600/audionautix%2BHalf%2BSize.jpg`
       }
-    ]
+    ],
+    answer: `0`
   },
 
 
@@ -152,7 +156,8 @@ const QUESTS = [
         src: `https://www.youtube.com/audiolibrary_download?vid=79100e44c826e2f7`,
         genre: `Electronic`
       }
-    ])
+    ]),
+    answers: [`1`]
   },
   {
     type: `artist`,
@@ -176,7 +181,8 @@ const QUESTS = [
         artist: `Audionautix`,
         image: `http://4.bp.blogspot.com/-kft9qu5ET6U/VPFUBi9W-MI/AAAAAAAACYM/UxXilXKYwOc/s1600/audionautix%2BHalf%2BSize.jpg`
       }
-    ]
+    ],
+    answer: `2`
   },
 
 
@@ -212,7 +218,8 @@ const QUESTS = [
         src: `https://www.youtube.com/audiolibrary_download?vid=91624fdc22fc54ed`,
         genre: `Jazz`
       }
-    ])
+    ]),
+    answers: [`3`]
   },
   {
     type: `artist`,
@@ -236,7 +243,8 @@ const QUESTS = [
         artist: `Riot`,
         image: `https://i.ytimg.com/vi/jzgM3m8Vp1k/maxresdefault.jpg`
       }
-    ]
+    ],
+    answer: `2`
   },
 
 
@@ -272,7 +280,8 @@ const QUESTS = [
         src: `https://www.youtube.com/audiolibrary_download?vid=dfb828f40096184c`,
         genre: `R&B`
       }
-    ])
+    ]),
+    answers: [`2`]
   },
   {
     type: `artist`,
@@ -296,7 +305,8 @@ const QUESTS = [
         artist: `Audionautix`,
         image: `http://4.bp.blogspot.com/-kft9qu5ET6U/VPFUBi9W-MI/AAAAAAAACYM/UxXilXKYwOc/s1600/audionautix%2BHalf%2BSize.jpg`
       }
-    ]
+    ],
+    answer: `0`
   }
 ];
 

@@ -1,6 +1,6 @@
 
-import {INIT_GAME} from './data/data';
-import QUESTS from './data/data-quest';
+import {INIT_GAME} from './data/quest';
+import QUESTS from './data/quest-data';
 import {renderLayout, renderGameScreen, renderResult, renderDefeat} from './utils/utils';
 
 

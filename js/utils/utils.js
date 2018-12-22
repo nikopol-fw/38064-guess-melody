@@ -1,13 +1,13 @@
 
-import QUESTS from '../data/data-quest';
+import QUESTS from '../data/quest-data';
 import {game, startGame, toNextLevel} from '../game';
-import {layout, gameScreen, changeLayoutState} from '../templates/layout-main';
-import headerTemplate from '../templates/layout-header';
+import {layoutNode, gameScreenNode, changeLayoutState} from '../templates/layout';
+import headerTemplate from '../templates/header-view';
 import WelcomeView from '../templates/welcome-view';
 import GameGenreView from '../templates/game-genre-view';
 import GameArtistView from '../templates/game-artist-view';
-import resultTemplate from '../templates/game-result';
-import defeatTemplate from '../templates/game-defeat';
+import resultTemplate from '../templates/result-win-view';
+import defeatTemplate from '../templates/result-defeat-lives';
 
 
 const appNode = document.querySelector(`.app`);
@@ -31,14 +31,14 @@ const renderLayout = () => {
 };
 
 // Отрисовка экрана приветствия
-const renderWelcomeScreen = () => {
-  clearScreen();
+// const renderWelcomeScreen = () => {
+//   clearScreen();
 
-  const welcomeScreen = new WelcomeView([`welcome`, `fuck`]);
-  welcomeScreen.onClick = startGame;
+//   const welcomeScreen = new WelcomeView([`welcome`]);
+//   welcomeScreen.onClick = startGame;
 
-  render(mainNode, welcomeScreen.element);
-};
+//   render(mainNode, welcomeScreen.element);
+// };
 
 // Отрисовка игрового экрана
 const renderGameScreen = (levelIndex) => {

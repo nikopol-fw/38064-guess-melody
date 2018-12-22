@@ -1,5 +1,5 @@
 
-import {renderWelcomeScreen} from './utils/utils';
+import Application from './app';
 
 
-renderWelcomeScreen();
+Application.showWelcome();

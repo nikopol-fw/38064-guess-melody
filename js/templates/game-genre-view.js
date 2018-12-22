@@ -31,7 +31,7 @@ export default class GameGenreView extends AbstractView {
         <audio src="${track.src}" id="track-${ind + 1}"></audio>
       </div>
       <div class="game__answer">
-        <input class="game__input visually-hidden" type="checkbox" name="answer" value="answer-${ind + 1}" id="answer-${ind + 1}">
+        <input class="game__input visually-hidden" type="checkbox" name="answer" value="${ind}" id="answer-${ind + 1}">
         <label class="game__check" for="answer-${ind + 1}">Отметить</label>
       </div>
     </div>`).join(``)}
@@ -63,8 +63,11 @@ export default class GameGenreView extends AbstractView {
     // Обработчик для кнопки "Ответить"
     submitBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
+      const checkedInputs = Array
+        .from(form.querySelectorAll(`.game__input:checked`))
+        .map((input) => input.value);
 
-      this.onSubmit();
+      this.onSubmit(checkedInputs);
     });
 
     // Обработчики для кнопок Play
