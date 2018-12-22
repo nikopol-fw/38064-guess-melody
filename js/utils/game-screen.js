@@ -17,8 +17,6 @@ export default class GameScreen {
       Application.showWelcome();
     };
     this.content = this._getLevelByType(model.state.level);
-
-
     this._timer = null;
   }
 

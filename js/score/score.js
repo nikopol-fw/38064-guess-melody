@@ -1,5 +1,6 @@
+// score
 
-const getScore = (answers, lives) => {
+const getScore = (answers) => {
   const TIME_LIMIT = 30;
   const Answer = {
     WRONG: -2,
@@ -11,11 +12,9 @@ const getScore = (answers, lives) => {
     return -1;
   }
 
-
   let scores = 0;
-
   answers.forEach((answer) => {
-    if (answer.answer === false) {
+    if (answer.isRight === false) {
       scores += Answer.WRONG;
     } else if (answer.time >= TIME_LIMIT) {
       scores += Answer.RIGHT;
@@ -23,11 +22,6 @@ const getScore = (answers, lives) => {
       scores += Answer.RIGHT_FAST;
     }
   });
-
-  // Параметр lives на данный момент является бесполезным, в подсчете результатов игры
-  // он никак не участвует. Данный код написани, чтобы проходить проверку eslint.
-  // Удалить после реализации приложения
-  answers = lives;
 
   return scores;
 };

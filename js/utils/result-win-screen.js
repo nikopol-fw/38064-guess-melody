@@ -1,6 +1,7 @@
 // result-win-screen
 
 import {FAST_ANSWER} from '../data/quest';
+import getScore from '../score/score';
 import ResultWinView from '../templates/result-win-view';
 
 
@@ -13,7 +14,8 @@ export default class ResultWinScreen {
     this.content = new ResultWinView(
         [`result`],
         this.model.gameTime,
-        this._getFastAnswers(this.model.answers)
+        this._getFastAnswers(this.model.answers),
+        this._getScore(this.model.answers)
     );
   }
 
@@ -30,5 +32,9 @@ export default class ResultWinScreen {
     });
 
     return count;
+  }
+
+  _getScore(answers) {
+    return getScore(answers);
   }
 }
